@@ -1,5 +1,6 @@
 import { faker } from "@faker-js/faker";
 import RestartButton from "./components/RestartButton";
+import Results from "./components/Results";
 
 const words = faker.random.words(10);
 
@@ -11,6 +12,12 @@ const App = () => {
       <RestartButton
         className={"mx-auto mt-10 text-slate-500"}
         onRestart={() => null}
+      />
+      <Results
+        className="mt-10"
+        errors={10}
+        accuracyPercentage={100}
+        total={200}
       />
     </>
   );
