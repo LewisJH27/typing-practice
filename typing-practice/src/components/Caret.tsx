@@ -5,7 +5,7 @@ const Caret = () => {
         <motion.div
             aria-hidden={true}
             className="inline-block bg-primary-500 w-0.5 h-7"
-            style={{ marginTop: "-3px", marginBottom: "-4px" }}
+            style={{ marginTop: "-3px", marginBottom: "-4px", borderRadius: "9999px" }}
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }}
             exit={{ opacity: 1 }}
