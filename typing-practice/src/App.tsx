@@ -10,13 +10,15 @@ const App = () => {
 
   return (
     <>
+      <h1 className="text-center text-slate-500 py-5 text-5xl">Typing Practice</h1>
+      <h3 className="text-center text-slate-500 py-8 text-2xl">by Lewis Hodgson</h3>
       <CountdownTimer timeLeft={timeLeft} />
       <WordsContainer>
         <GeneratedWords words={words} />
         <UserTypings className="absolute inset-0" words={words} userInput={typed} />
       </WordsContainer>
       <RestartButton
-        className={"mx-auto mt-10 text-slate-500"}
+        className={"mx-auto mt-10 text-blue-400"}
         onRestart={restart}
       />
       <Results
@@ -40,9 +42,9 @@ const WordsContainer = ({ children }: { children: React.ReactNode }) => {
 };
 
 const GeneratedWords = ({ words }: { words: string}) => {
-  return <div className=" text-slate-500">{words}</div>
+  return <div className="text-slate-400">{words}</div>
 };
 const CountdownTimer = ({timeLeft}: {timeLeft: number}) => {
-  return <h2 className="text-primary-400 font-medium">Time: {timeLeft}</h2>
+  return <h2 className="text-blue-400 text-center font-small">{timeLeft}s</h2>
 };
 export default App;
